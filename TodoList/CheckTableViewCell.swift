@@ -18,12 +18,20 @@ class CheckTableViewCell: UITableViewCell {
     
     @IBOutlet weak var checkbox: Checkbox!
     
+    weak var delegate: CheckTableViewCellDelegate?
+    
+    //call when checkbox changes it's state
     @IBAction func checked(_ sender: Checkbox) {
         updateChecked()
+        delegate?.checkTableViewCell(self, didChangeCheckedState: checkbox.checked)
     }
     
     func set(title: String, checked: Bool) {
         label.text = title
+        set(checked: checked)
+    }
+    
+    func set(checked: Bool) {
         checkbox.checked = checked
         updateChecked()
     }
