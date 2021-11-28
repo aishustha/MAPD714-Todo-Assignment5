@@ -16,6 +16,7 @@
 		61A1072627525E1C00DAFFEC /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A1072527525E1C00DAFFEC /* Todo.swift */; };
 		61A107282752719300DAFFEC /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A107272752719300DAFFEC /* Checkbox.swift */; };
 		61A1072C27527B6600DAFFEC /* CheckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A1072B27527B6600DAFFEC /* CheckTableViewCell.swift */; };
+		61A1072E2753272F00DAFFEC /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A1072D2753272F00DAFFEC /* TodoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		61A1072527525E1C00DAFFEC /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		61A107272752719300DAFFEC /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		61A1072B27527B6600DAFFEC /* CheckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckTableViewCell.swift; sourceTree = "<group>"; };
+		61A1072D2753272F00DAFFEC /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				61A1072527525E1C00DAFFEC /* Todo.swift */,
 				61A107272752719300DAFFEC /* Checkbox.swift */,
 				61A1072B27527B6600DAFFEC /* CheckTableViewCell.swift */,
+				61A1072D2753272F00DAFFEC /* TodoViewController.swift */,
 			);
 			path = TodoList;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			files = (
 				61A1072C27527B6600DAFFEC /* CheckTableViewCell.swift in Sources */,
 				61A1071427525DB400DAFFEC /* ViewController.swift in Sources */,
+				61A1072E2753272F00DAFFEC /* TodoViewController.swift in Sources */,
 				61A1071027525DB400DAFFEC /* AppDelegate.swift in Sources */,
 				61A1071227525DB400DAFFEC /* SceneDelegate.swift in Sources */,
 				61A1072627525E1C00DAFFEC /* Todo.swift in Sources */,

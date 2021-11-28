@@ -49,16 +49,13 @@
                                                     <rect key="frame" x="338" y="5" width="56" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="checked" value="NO"/>
-                                                    </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="checkChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="eMm-Oe-YAj"/>
                                                         <action selector="checked:" destination="FJY-tB-Lqz" eventType="valueChanged" id="93s-Pd-by2"/>
                                                     </connections>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iip-sG-qFs">
-                                                    <rect key="frame" x="20" y="11" width="322" height="22"/>
+                                                    <rect key="frame" x="37" y="11" width="305" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -69,6 +66,7 @@
                                         <connections>
                                             <outlet property="checkbox" destination="qiR-jO-jc9" id="2gc-b8-Vyf"/>
                                             <outlet property="label" destination="iip-sG-qFs" id="R6q-y9-VBj"/>
+                                            <segue destination="1ec-zx-iGY" kind="show" destinationCreationSelector="todoViewController:" id="Jg4-I0-ZlN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -84,6 +82,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" title="">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25" scale="large" weight="medium"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="1ec-zx-iGY" kind="show" id="fx7-bc-RPp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -95,10 +96,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1583" y="-27"/>
+            <point key="canvasLocation" x="-2520.289855072464" y="174.77678571428569"/>
+        </scene>
+        <!--Todo View Controller-->
+        <scene sceneID="7O2-pf-dAP">
+            <objects>
+                <viewController id="1ec-zx-iGY" customClass="TodoViewController" customModule="TodoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="md8-80-tYZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b28-jj-YqQ">
+                                <rect key="frame" x="20" y="134" width="357" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNJ-Wf-18g">
+                                <rect key="frame" x="322" y="38" width="55" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.down.doc" catalog="system" title="">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20" scale="large" weight="bold"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="save:" destination="1ec-zx-iGY" eventType="touchUpInside" id="m99-97-YGz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hpW-gs-9CB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Gdf-2b-YgS"/>
+                    <connections>
+                        <outlet property="textfield" destination="b28-jj-YqQ" id="mLA-Al-S6j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vds-l2-fPM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1461" y="103"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fx7-bc-RPp"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="arrow.down.doc" catalog="system" width="115" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">

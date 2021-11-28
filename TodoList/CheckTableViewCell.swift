@@ -8,8 +8,7 @@
 import UIKit
 
 protocol CheckTableViewCellDelegate: AnyObject {
-    func checkTableViewCell(_ cell: CheckTableViewCell,
-                            didChangeCheckedState checked: Bool)
+  func checkTableViewCell(_ cell: CheckTableViewCell, didChagneCheckedState checked: Bool)
 }
 
 class CheckTableViewCell: UITableViewCell {
@@ -23,30 +22,30 @@ class CheckTableViewCell: UITableViewCell {
     //call when checkbox changes it's state
     @IBAction func checked(_ sender: Checkbox) {
         updateChecked()
-        delegate?.checkTableViewCell(self, didChangeCheckedState: checkbox.checked)
-    }
+        delegate?.checkTableViewCell(self, didChagneCheckedState: checkbox.checked)
+      }
     
     func set(title: String, checked: Bool) {
-        label.text = title
-        set(checked: checked)
+      label.text = title
+      set(checked: checked)
     }
     
     func set(checked: Bool) {
-        checkbox.checked = checked
-        updateChecked()
+      checkbox.checked = checked
+      updateChecked()
     }
     
     private func updateChecked() {
-        let attributedString = NSMutableAttributedString(string: label.text!)
-        
-        if checkbox.checked {
-            attributedString.addAttribute(.strikethroughStyle, value: 2, range: NSMakeRange(0, attributedString.length-1))
-        }
-        
-        else{
-            attributedString.removeAttribute(.strikethroughStyle, range: NSMakeRange(0, attributedString.length-1))
-        }
-        
-        label.attributedText = attributedString
+      let attributedString = NSMutableAttributedString(string: label.text!)
+      
+      if checkbox.checked {
+        attributedString.addAttribute(.strikethroughStyle, value: 2, range: NSMakeRange(0, attributedString.length-1))
+      } else {
+        attributedString.removeAttribute(.strikethroughStyle, range: NSMakeRange(0, attributedString.length-1))
+      }
+      
+      label.attributedText = attributedString
     }
-}
+    
+
+  }
