@@ -8,15 +8,22 @@
 import Foundation
 
 struct Todo {
-  let title: String
-  let isComplete: Bool
-  
-  init(title: String, isComplete: Bool = false) {
-    self.title = title
-    self.isComplete = isComplete
-  }
-  
-  func completeToggled() -> Todo {
-    return Todo(title: title, isComplete: !isComplete)
-  }
+    let title: String
+    let isComplete: Bool
+    let hasDueDate:Bool
+    //let dueDate: Date
+    let notes: String
+    
+    init(title: String, isComplete: Bool = false, hasDueDate:Bool = false, notes:String="") {
+        self.title = title
+        self.isComplete = isComplete
+        self.hasDueDate=hasDueDate
+        // self.dueDate = dueDate
+        self.notes=notes
+    }
+    
+    // handle swipe right
+    func completeToggled() -> Todo {
+        return Todo(title: title, isComplete: !isComplete)
+    }
 }

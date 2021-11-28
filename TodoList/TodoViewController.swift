@@ -19,6 +19,9 @@ protocol TodoViewControllerDelegate: AnyObject {
 class TodoViewController: UIViewController {
     
     @IBOutlet weak var textfield: UITextField!
+    @IBOutlet weak var hasDueDateSwitch: UISwitch!
+    @IBOutlet weak var notesTextField: UITextField!
+    
     var todo: Todo?
      
     weak var delegate: TodoViewControllerDelegate?
@@ -26,17 +29,20 @@ class TodoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // pass value before loading
         textfield.text = todo?.title
+        hasDueDateSwitch.isOn=((todo?.hasDueDate) != nil)
+        notesTextField.text = todo?.notes
+        
     }
     
 
     // create brand new todo
     @IBAction func save(_ sender: Any) {
-        let todo = Todo(title: textfield.text!)
+        let todo = Todo(title: textfield.text!,hasDueDate: hasDueDateSwitch.isOn, notes: notesTextField.text!)
         
         // send brand new todo back with delegate
         delegate?.todoViewController(self, didSaveTodo: todo)
     }
-    
 }
 
