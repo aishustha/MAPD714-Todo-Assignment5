@@ -21,19 +21,22 @@ class CheckTableViewCell: UITableViewCell {
 
     // Todo item's label and status(checkbox)
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var checkbox: Checkbox!
+    @IBOutlet weak var checkswitch: UISwitch!
     
     // self-delegate 
     weak var delegate: CheckTableViewCellDelegate?
     
     // checkbox action handler
-    @IBAction func checked(_ sender: Checkbox) {
+    @IBAction func checked(_ sender: UISwitch) {
         updateChecked()
         
         // delegate is being called from here
-        delegate?.checkTableViewCell(self, didChagneCheckedState: checkbox.checked)
+        delegate?.checkTableViewCell(self, didChagneCheckedState: checkswitch.isOn)
       }
     
+    
+   
+       
     // function to be used by ViewController when it's using the cell
     func set(title: String, checked: Bool) {
       label.text = title
@@ -41,7 +44,7 @@ class CheckTableViewCell: UITableViewCell {
     }
     
     func set(checked: Bool) {
-      checkbox.checked = checked
+      checkswitch.isOn = checked
       updateChecked()
     }
     
@@ -49,7 +52,7 @@ class CheckTableViewCell: UITableViewCell {
     private func updateChecked() {
       let attributedString = NSMutableAttributedString(string: label.text!)
       
-      if checkbox.checked {
+      if checkswitch.isOn {
         attributedString.addAttribute(.strikethroughStyle, value: 2, range: NSMakeRange(0, attributedString.length-1))
       } else {
         attributedString.removeAttribute(.strikethroughStyle, range: NSMakeRange(0, attributedString.length-1))

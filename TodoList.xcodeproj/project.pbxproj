@@ -14,7 +14,6 @@
 		61A1071927525DB500DAFFEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61A1071827525DB500DAFFEC /* Assets.xcassets */; };
 		61A1071C27525DB500DAFFEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61A1071A27525DB500DAFFEC /* LaunchScreen.storyboard */; };
 		61A1072627525E1C00DAFFEC /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A1072527525E1C00DAFFEC /* Todo.swift */; };
-		61A107282752719300DAFFEC /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A107272752719300DAFFEC /* Checkbox.swift */; };
 		61A1072C27527B6600DAFFEC /* CheckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A1072B27527B6600DAFFEC /* CheckTableViewCell.swift */; };
 		61A1072E2753272F00DAFFEC /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A1072D2753272F00DAFFEC /* TodoViewController.swift */; };
 /* End PBXBuildFile section */
@@ -29,7 +28,6 @@
 		61A1071B27525DB500DAFFEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61A1071D27525DB500DAFFEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61A1072527525E1C00DAFFEC /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
-		61A107272752719300DAFFEC /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		61A1072B27527B6600DAFFEC /* CheckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckTableViewCell.swift; sourceTree = "<group>"; };
 		61A1072D2753272F00DAFFEC /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,7 +70,6 @@
 				61A1071A27525DB500DAFFEC /* LaunchScreen.storyboard */,
 				61A1071D27525DB500DAFFEC /* Info.plist */,
 				61A1072527525E1C00DAFFEC /* Todo.swift */,
-				61A107272752719300DAFFEC /* Checkbox.swift */,
 				61A1072B27527B6600DAFFEC /* CheckTableViewCell.swift */,
 				61A1072D2753272F00DAFFEC /* TodoViewController.swift */,
 			);
@@ -156,7 +153,6 @@
 				61A1071027525DB400DAFFEC /* AppDelegate.swift in Sources */,
 				61A1071227525DB400DAFFEC /* SceneDelegate.swift in Sources */,
 				61A1072627525E1C00DAFFEC /* Todo.swift in Sources */,
-				61A107282752719300DAFFEC /* Checkbox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

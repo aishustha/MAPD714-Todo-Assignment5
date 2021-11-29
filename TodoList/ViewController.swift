@@ -26,10 +26,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func checkChanged(_ sender: Checkbox) {
-        print("Checkbox \(sender.checked ? "Checked" : "Unchecked")")
-    }
-    
+//    @IBAction func checkChanged(_ sender: Checkbox) {
+//        print("Checkbox \(sender.checked ? "Checked" : "Unchecked")")
+//    }
+//    
     // Enable Multi-Delete behavior in table view
     @IBAction func startEditing(_ sender: Any) {
         tableView.isEditing = !tableView.isEditing
@@ -134,6 +134,9 @@ extension ViewController: UITableViewDataSource {
         // calling the method on CheckTableViewCell
         cell.set(title: todo.title, checked: todo.isComplete)
         
+        
+       
+       
         return cell
     }
     
