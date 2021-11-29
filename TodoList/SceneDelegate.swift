@@ -1,9 +1,11 @@
-//
-//  SceneDelegate.swift
-//  TodoList
-//
-//  Created by Aishwarya Shrestha on 27/11/2021.
-//
+/**
+ * SceneDelegate.swift
+  * Students                 : Keshav Dulal (301209947), Aishwarya Shrestha (301138662)
+  * Course                   : MAPD iOS App Development
+  * Submission Date   : 11/28/2021
+  * Exercise Number   : A5 - Todo App - Part 2 - Logic for Data Persistence
+  * Github Repo          : https://github.com/aishustha/MAPD714-Todo-Assignment5
+  */
 
 import UIKit
 

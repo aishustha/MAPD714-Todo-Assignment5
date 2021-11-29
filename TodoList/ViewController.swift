@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     var todos = [
         Todo(title: "Shop groceries"),
         Todo(title: "Put old stuffs on sale"),
-        Todo(title: "Text Ian"),
+        Todo(title: "Text Aishwarya"),
     ]
     
     @IBOutlet weak var tableView: UITableView!
