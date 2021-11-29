@@ -21,6 +21,7 @@ class TodoViewController: UIViewController {
     @IBOutlet weak var textfield: UITextField!
     @IBOutlet weak var hasDueDateSwitch: UISwitch!
     @IBOutlet weak var notesTextField: UITextField!
+    @IBOutlet weak var isCompletedSwitch2: UISwitch!
     
     var todo: Todo?
     
@@ -31,6 +32,7 @@ class TodoViewController: UIViewController {
         
         // pass value before loading
         textfield.text = todo?.title
+        isCompletedSwitch2.isOn = ((todo?.isComplete) != nil) ? todo?.isComplete as! Bool : false;
         //        hasDueDateSwitch.isOn=((todo?.hasDueDate) != nil)
         hasDueDateSwitch.isOn=((todo?.hasDueDate) != nil) ? todo?.hasDueDate as! Bool : false;
         notesTextField.text = todo?.notes
@@ -40,7 +42,7 @@ class TodoViewController: UIViewController {
     
     // create brand new todo
     @IBAction func save(_ sender: Any) {
-        let todo = Todo(title: textfield.text!,hasDueDate: hasDueDateSwitch.isOn, notes: notesTextField.text!)
+        let todo = Todo(title: textfield.text!,isComplete: isCompletedSwitch2.isOn, hasDueDate: hasDueDateSwitch.isOn, notes: notesTextField.text!)
         
         // send brand new todo back with delegate
         delegate?.todoViewController(self, didSaveTodo: todo)

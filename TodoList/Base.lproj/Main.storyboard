@@ -233,6 +233,7 @@
                     <navigationItem key="navigationItem" id="Gdf-2b-YgS"/>
                     <connections>
                         <outlet property="hasDueDateSwitch" destination="xZN-eb-NCk" id="a81-A9-pUQ"/>
+                        <outlet property="isCompletedSwitch2" destination="q1d-5F-4ab" id="lUP-LI-Idg"/>
                         <outlet property="notesTextField" destination="FHO-da-ILt" id="tsf-OG-lzl"/>
                         <outlet property="textfield" destination="b28-jj-YqQ" id="mLA-Al-S6j"/>
                     </connections>
