@@ -6,26 +6,25 @@
   * Exercise Number   : A5 - Todo App - Part 2 - Logic for Data Persistence
   * Github Repo          : https://github.com/aishustha/MAPD714-Todo-Assignment5
   */
-*
+
 import Foundation
 
 struct Todo {
     let title: String
     let isComplete: Bool
-    let hasDueDate:Bool
-    //let dueDate: Date
+    let hasDueDateSwitch:Bool
     let notes: String
     
-    init(title: String, isComplete: Bool = false, hasDueDate:Bool = false, notes:String="") {
+    init(title: String, isComplete: Bool = false, hasDueDateSwitch:Bool = false, notes:String="") {
         self.title = title
         self.isComplete = isComplete
-        self.hasDueDate=hasDueDate
-        // self.dueDate = dueDate
+        self.hasDueDateSwitch=hasDueDateSwitch
         self.notes=notes
     }
     
     // handle swipe right
     func completeToggled() -> Todo {
-        return Todo(title: title, isComplete: !isComplete)
+            return Todo(title: title, isComplete: !isComplete, hasDueDateSwitch: !hasDueDateSwitch)
+        
     }
 }

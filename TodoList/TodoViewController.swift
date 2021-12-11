@@ -9,6 +9,7 @@
   */
 
 import UIKit
+import FirebaseDatabase
 
 protocol TodoViewControllerDelegate: AnyObject {
     // called everytime Save button is clicked
@@ -17,6 +18,8 @@ protocol TodoViewControllerDelegate: AnyObject {
 
 // when
 class TodoViewController: UIViewController {
+    private let database = Database.database().reference()
+
     
     @IBOutlet weak var textfield: UITextField!
     @IBOutlet weak var hasDueDateSwitch: UISwitch!
@@ -30,19 +33,28 @@ class TodoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // pass value before loading
-        textfield.text = todo?.title
-        isCompletedSwitch2.isOn = ((todo?.isComplete) != nil) ? todo?.isComplete as! Bool : false;
-        //        hasDueDateSwitch.isOn=((todo?.hasDueDate) != nil)
-        hasDueDateSwitch.isOn=((todo?.hasDueDate) != nil) ? todo?.hasDueDate as! Bool : false;
-        notesTextField.text = todo?.notes
-        
+//        // pass value before loading
+//        textfield.text = todo?.title
+//
+//        isCompletedSwitch2.isOn = ((todo?.isComplete) != nil) ? todo?.isComplete as! Bool : false;
+//        //        hasDueDateSwitch.isOn=((todo?.hasDueDate) != nil)
+//        hasDueDateSwitch.isOn=((todo?.hasDueDate) != nil) ? todo?.hasDueDate as! Bool : false;
+//        notesTextField.text = todo?.notes
+//
     }
     
     
     // create brand new todo
     @IBAction func save(_ sender: Any) {
-        let todo = Todo(title: textfield.text!,isComplete: isCompletedSwitch2.isOn, hasDueDate: hasDueDateSwitch.isOn, notes: notesTextField.text!)
+        let todo = Todo(title: textfield.text!,isComplete: isCompletedSwitch2.isOn, hasDueDateSwitch: hasDueDateSwitch.isOn, notes: notesTextField.text!)
+        
+        //text
+        database.child(textfield.text!).setValue(hasDueDateSwitch.isOn)
+        //notes
+        database.child(notesTextField.text!).setValue(hasDueDateSwitch.isOn)
+        
+        
+
         
         // send brand new todo back with delegate
         delegate?.todoViewController(self, didSaveTodo: todo)
