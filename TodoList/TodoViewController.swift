@@ -18,6 +18,7 @@ protocol TodoViewControllerDelegate: AnyObject {
 
 // when
 class TodoViewController: UIViewController {
+    //variable for database is a database.database.reference
     private let database = Database.database().reference()
 
     
@@ -48,7 +49,8 @@ class TodoViewController: UIViewController {
     @IBAction func save(_ sender: Any) {
         let todo = Todo(title: textfield.text!,isComplete: isCompletedSwitch2.isOn, hasDueDateSwitch: hasDueDateSwitch.isOn, notes: notesTextField.text!)
         
-        //text
+        //setting properties of child
+        //textfield
         database.child(textfield.text!).setValue(hasDueDateSwitch.isOn)
         //notes
         database.child(notesTextField.text!).setValue(hasDueDateSwitch.isOn)

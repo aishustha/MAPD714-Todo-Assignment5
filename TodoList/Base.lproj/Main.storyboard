@@ -53,12 +53,12 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qji-mj-f82">
+                                                <switch hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qji-mj-f82">
                                                     <rect key="frame" x="250" y="6" width="51" height="31.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="49" id="1lH-ce-a9d"/>
                                                     </constraints>
-                                                    <color key="tintColor" systemColor="labelColor"/>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
                                                         <action selector="checked:" destination="FJY-tB-Lqz" eventType="valueChanged" id="ZYt-MI-row"/>
                                                     </connections>

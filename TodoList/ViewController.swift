@@ -79,6 +79,21 @@ extension ViewController: UITableViewDelegate {
     // i.e. Mark todo as complete
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
+//        // closure
+//        let action = UIContextualAction(style: .normal, title: "Complete") { action, view, complete in
+//
+//            // completion logic
+//            let todo = self.todos[indexPath.row].completeToggled()
+//            self.todos[indexPath.row] = todo
+//
+//            let cell = tableView.cellForRow(at: indexPath) as! CheckTableViewCell
+//            cell.set(checked: todo.isComplete)
+//
+//            complete(true)
+//
+//            //  print("complete")
+//        }
+        
         // closure
         let action = UIContextualAction(style: .normal, title: "Complete") { action, view, complete in
             
